@@ -22,16 +22,17 @@ declare module "nativescript-purchase" {
 
     export function init(productIdentifiers: Array<string>): Promise<any>;
     export function getProducts(): Promise<Array<Product>>;
-    export function buyProduct(product: Product, developerPayload?: string);
+    export function buyProduct(product: Product, developerPayload?: string): Promise<void>; // Düzeltildi
     export function consumePurchase(token: string): Promise<number>;
     export function restorePurchases(): Promise<void>;
     export function canMakePayments(): boolean;
     export function getStoreReceipt(): string;
     export function refreshStoreReceipt(): Promise<void>;
 
-    export function on(eventName: string, handler: (data: any) => void);
-    export function on(eventName: "transactionUpdated", handler: (data: Transaction) => void);
+    export function on(eventName: string, handler: (data: any) => void): void; // Düzeltildi
+    export function on(eventName: "transactionUpdated", handler: (data: Transaction) => void): void; // Düzeltildi
 
-    export function off(eventName: string, handler?: (data: any) => void);
-    export function off(eventName: "transactionUpdated", handler?: (data: Transaction) => void);
+    export function off(eventName: string, handler?: (data: any) => void): void; // Düzeltildi
+    export function off(eventName: "transactionUpdated", handler?: (data: Transaction) => void): void; // Düzeltildi
 }
+

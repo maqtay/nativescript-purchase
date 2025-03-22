@@ -6,8 +6,8 @@
   "typings": "nativescript-purchase.d.ts",
   "nativescript": {
     "platforms": {
-      "ios": "3.0.0",
-      "android": "3.0.0"
+      "ios": "3.0.1",
+      "android": "3.0.1"
     },
     "plugin": {
       "nan": "true",
